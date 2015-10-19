@@ -19,11 +19,4 @@ interface WorkerInterface
      * @param CodingExecutionResult $result
      */
     public function executeCode($rootDir, $entryPointFilename, CodingContext $context, CodingExecutionResult $result);
-
-    /**
-     * Gets the name of the worker.
-     *
-     * @return string
-     */
-    public function getName();
 }
