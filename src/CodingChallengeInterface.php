@@ -13,9 +13,10 @@ use KnpU\Gladiator\CodingChallenge\CodingContext;
  */
 interface CodingChallengeInterface extends ChallengeInterface
 {
-    const EXECUTION_MODE_PHP_NORMAL     = 'php_normal';
-    const EXECUTION_MODE_TWIG_NORMAL    = 'twig_normal';
-    const EXECUTION_MODE_GHERKIN        = 'gherkin';
+    // helper constants for the most common
+    const EXECUTION_PHP_NORMAL          = 'KnpU\Gladiator\BaseWorker\Worker\PhpWorker';
+    const EXECUTION_MODE_TWIG_NORMAL    = 'KnpU\Gladiator\BaseWorker\Worker\TwigWorker';
+    const EXECUTION_MODE_GHERKIN        = 'KnpU\Gladiator\BaseWorker\Worker\GherkinWorker';
 
     /**
      * Add files and set the entry point
@@ -31,14 +32,7 @@ interface CodingChallengeInterface extends ChallengeInterface
      *
      * @return string
      */
-    public function getExecutionMode();
-
-    /**
-     * Returns the path to a directory with a docker-compose.yml file
-     *
-     * @return string
-     */
-    public function getDockerComposeDirectory();
+    public function getWorkerClass();
 
     /**
      * Configure the context for the code
