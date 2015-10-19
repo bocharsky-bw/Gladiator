@@ -41,12 +41,16 @@ class FakedRequest
     }
 
     /**
-     * Turns this informtion into a Symfony Request object
+     * Turns this information into a Symfony Request object
      *
      * @return Request
      */
     public function createRequest()
     {
+        if (!class_exists('Symfony\Component\HttpFoundation\Request')) {
+            throw new \LogicException('The FakedRequest class requires symfony/http-foundation.');
+        }
+
         $request = Request::create(
             $this->uri,
             $this->method,

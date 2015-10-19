@@ -2,8 +2,7 @@
 
 namespace KnpU\Gladiator\CodingChallenge;
 
-use KnpU\ActivityRunner\Activity\CodingChallenge\Request\FakedRequest;
-use Symfony\Component\HttpFoundation\Request;
+use KnpU\Gladiator\CodingChallenge\Request\FakedRequest;
 
 /**
  * Holds information about variables and other things that'll be setup before running code

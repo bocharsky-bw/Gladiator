@@ -1,0 +1,19 @@
+{
+    "name": "knpuniversity/gladiator",
+    "type": "library",
+    "description": "Classes to support KnpUniversity challenges",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "KnpUniversity",
+            "email": "hello@knpuniversity.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-0": {
+            "KnpU\\Gladiator": "src"
+        }
+    }
+}
