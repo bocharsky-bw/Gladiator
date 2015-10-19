@@ -1,6 +1,6 @@
 <?php
 
-namespace KnpU\Gladiator\Exception;
+namespace KnpU\Gladiator\CodingChallenge\Exception;
 
 /**
  * Thrown when there is an error grading
