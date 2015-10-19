@@ -12,8 +12,8 @@
     "require": {
     },
     "autoload": {
-        "psr-0": {
-            "KnpU\\Gladiator": "src"
+        "psr-4": {
+            "KnpU\\Gladiator\\": "src"
         }
     }
 }
