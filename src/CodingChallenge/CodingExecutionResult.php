@@ -2,7 +2,7 @@
 
 namespace KnpU\Gladiator\CodingChallenge;
 
-use KnpU\Gladiator\Exception\GradingException;
+use KnpU\Gladiator\CodingChallenge\Exception\GradingException;
 
 /**
  * Used inside the eval'ed scripts themselves to summarize what happened
