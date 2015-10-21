@@ -9,7 +9,7 @@ class CorrectAnswer
 {
     private $files;
 
-    public static function createFromFileBuilder(FileBuilder $builder)
+    public static function createFromChallengeBuilder(ChallengeBuilder $builder)
     {
         $answer = new static();
 

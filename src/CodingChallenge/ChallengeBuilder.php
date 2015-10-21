@@ -5,13 +5,11 @@ namespace KnpU\Gladiator\CodingChallenge;
 /**
  * Helps to build the files for a challenge.
  */
-class FileBuilder
+class ChallengeBuilder
 {
-    private $serviceName;
-
-    private $mountPoint;
-
     private $entryPointFilename;
+
+    private $hasCommandLine = false;
 
     /**
      * @var File[]
@@ -22,16 +20,6 @@ class FileBuilder
      * @var array with keys "path" and "readonly"
      */
     private $pendingFileDetails = array();
-
-    /**
-     * @param string $serviceName The docker service name these will be mounted into
-     * @param string $mountPoint The directory - e.g. /code to mount these
-     */
-    public function __construct($serviceName = 'php', $mountPoint = '/code')
-    {
-        $this->serviceName = $serviceName;
-        $this->mountPoint = $mountPoint;
-    }
 
     /**
      * What's the filename that should be executed first
@@ -154,13 +142,13 @@ class FileBuilder
         return $this;
     }
 
-    public function getMountPoint()
+    public function activateCommandLine()
     {
-        return $this->mountPoint;
+        $this->hasCommandLine = true;
     }
 
-    public function getServiceName()
+    public function hasCommandLine()
     {
-        return $this->serviceName;
+        return $this->hasCommandLine;
     }
 }

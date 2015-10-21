@@ -4,8 +4,8 @@ namespace KnpU\Gladiator;
 
 use KnpU\Gladiator\CodingChallenge\CodingExecutionResult;
 use KnpU\Gladiator\CodingChallenge\CorrectAnswer;
-use KnpU\Gladiator\Exception\GradingException;
-use KnpU\Gladiator\CodingChallenge\FileBuilder;
+use KnpU\Gladiator\CodingChallenge\Exception\GradingException;
+use KnpU\Gladiator\CodingChallenge\ChallengeBuilder;
 use KnpU\Gladiator\CodingChallenge\CodingContext;
 
 /**
@@ -21,18 +21,16 @@ interface CodingChallengeInterface extends ChallengeInterface
     /**
      * Add files and set the entry point
      *
-     * @return FileBuilder
+     * @return ChallengeBuilder
      */
-    public function getFileBuilder();
+    public function getChallengeBuilder();
 
     /**
-     * Choose an EXECUTION_MODE_* constant
-     *
-     * This is how the code will be executed
+     * A worker name that you've configured.
      *
      * @return string
      */
-    public function getWorkerClass();
+    public function getWorkerType();
 
     /**
      * Configure the context for the code
