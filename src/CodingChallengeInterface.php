@@ -7,6 +7,7 @@ use KnpU\Gladiator\CodingChallenge\CorrectAnswer;
 use KnpU\Gladiator\CodingChallenge\Exception\GradingException;
 use KnpU\Gladiator\CodingChallenge\ChallengeBuilder;
 use KnpU\Gladiator\CodingChallenge\CodingContext;
+use KnpU\Gladiator\Worker\WorkerLoaderInterface;
 
 /**
  * All activities will implement this interface
@@ -30,7 +31,7 @@ interface CodingChallengeInterface extends ChallengeInterface
      *
      * @return string
      */
-    public function getWorkerType();
+    public function getWorkerConfig(WorkerLoaderInterface $loader);
 
     /**
      * Configure the context for the code
