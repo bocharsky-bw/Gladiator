@@ -27,9 +27,9 @@ interface CodingChallengeInterface extends ChallengeInterface
     public function getChallengeBuilder();
 
     /**
-     * A worker name that you've configured.
+     * An array to configure your worker and environment
      *
-     * @return string
+     * @return array
      */
     public function getWorkerConfig(WorkerLoaderInterface $loader);
 
