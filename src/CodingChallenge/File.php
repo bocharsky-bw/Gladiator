@@ -12,6 +12,8 @@ class File
     const TYPE_TWIG = 'twig';
     const TYPE_JSON = 'json';
     const TYPE_GHERKIN = 'feature';
+    const MODE_READONLY_ENABLED = true;
+    const MODE_READONLY_DISABLED = false;
 
     private $filename;
 
@@ -21,7 +23,7 @@ class File
 
     private $readonly;
 
-    public function __construct($filename, $contents, $fileType, $readonly = false)
+    public function __construct($filename, $contents, $fileType, $readonly = self::MODE_READONLY_DISABLED)
     {
         $this->filename = $filename;
         $this->contents = $contents;

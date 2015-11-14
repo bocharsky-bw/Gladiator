@@ -45,7 +45,7 @@ class ChallengeBuilder
      *
      * @return $this
      */
-    public function addFile($filename, $path, $readonly = false)
+    public function addFile($filename, $path, $readonly = File::MODE_READONLY_DISABLED)
     {
         // add this as a file, but don't set its contents automatically
         $this->files[$filename] = null;
@@ -67,7 +67,7 @@ class ChallengeBuilder
      *
      * @return $this
      */
-    public function addFileContents($filename, $contents, $readonly = false)
+    public function addFileContents($filename, $contents, $readonly = File::MODE_READONLY_DISABLED)
     {
         $type = File::determineFileType($filename);
         $file = new File($filename, $contents, $type, $readonly);
